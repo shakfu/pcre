@@ -70,14 +70,14 @@
 # 2021-06-14 PH changed CMAKE_MODULE_PATH definition to add, not replace
 # 2021-06-14 PH applied Wolfgang Stöggl's patch for generating pcre-config and
 #            libpcre*.pc files (Bugzilla #2583)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
 PROJECT(PCRE C CXX)
 
 # Increased minimum to 2.8.5 to support GNUInstallDirs. Set policy
 # CMP0026 to avoid warnings for the use of LOCATION in GET_TARGET_PROPERTY.
 
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.5)
-CMAKE_POLICY(SET CMP0026 OLD)
+# CMAKE_POLICY(SET CMP0026 OLD)
 
 # For FindReadline.cmake. This was changed to allow setting CMAKE_MODULE_PATH
 # on the command line.
